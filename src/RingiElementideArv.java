@@ -14,15 +14,15 @@ public class RingiElementideArv {
 		double r2 = ringiR2(radius, elemendiC);
 		return Math.sqrt(Math.pow(r2, 2) - Math.pow(elemendiC/2, 2));
 	}
-	//Suurem ringi raadius
+	//Suurem ringi raadius 
 	public static double bRingiRaadius(double radius, double elemendiC){
 		double angle = 2*Math.PI/Math.floor(ringiC(radius)/elemendiC + 2);
 		double r2 = elemendiC/(2 * Math.sin(angle/2));
 		return Math.sqrt(Math.pow(r2, 2) - Math.pow(elemendiC/2, 2));
 	}
-	
-	public static double elementideArv(double radius, double elemendiC){
-		return ringiC(radius)/elemendiC;
+	//Tagastab elementide arvu, mis on alati paarisarv
+	public static int elementideArv(double radius, int elemendiC){
+		return (int)Math.round((ringiC(radius)/elemendiC)/2) * 2;
 	}
 	
 	
